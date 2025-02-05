@@ -93,7 +93,7 @@ body {
 .title-description {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .title-description h1 {
