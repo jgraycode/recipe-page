@@ -1,0 +1,268 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* Colors */
+:root {
+  --rose-800: #7a284e;
+  --rose-50: #fff7fb;
+  --stone-900: #312e2c;
+  --stone-600: #5f564d;
+  --stone-150: #e3ddd7;
+  --stone-100: #f3e5d7;
+  --brown-800: #854632;
+  --white: #fff;
+}
+
+/* Text Styles */
+.text-preset1 {
+  font-family: "Young Serif", serif;
+  font-size: 2.5rem;
+}
+.text-preset2 {
+  font-family: "Young Serif", serif;
+  font-size: 1.75rem;
+}
+.text-preset3 {
+  font-family: "Outfit", serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.text-preset4 {
+  font-family: "Outfit", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+.text-preset4-bold {
+  font-family: "Outfit", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+/* General Styles */
+ 
+body {
+  background-color: var(--stone-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--stone-600);
+  padding: 128px 48px;
+}
+
+.container {
+  width: 736px;
+  height: fit-content;
+  padding: 2.5rem;
+  background-color: var(--white);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.header-image {
+  height: 300px;
+  width: 100%;
+  border-radius: 12px;
+    object-fit: cover;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title-description h1 {
+  color: var(--stone-900);
+}
+
+.preparation,
+.ingredients,
+.instructions,
+.nutrition {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.preparation {
+  background-color: var(--rose-50);
+
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.time-list,
+.ingredients-list,
+.instructions-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.preparation h3 {
+  color: var(--rose-800);
+}
+
+.ingredients h2,
+.instructions h2,
+.nutrition h2 {
+  color: var(--brown-800);
+}
+
+.grid-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem 2rem;
+}
+
+.grid-wrap p:last-child {
+  color: var(--brown-800);
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+ul > li,
+ol > li {
+  padding-left: 0.5rem;
+}
+ol > li::marker,
+ul > li::marker {
+  color: var(--brown-800);
+  font-weight: 700;
+}
+
+ul > li::marker {
+  content: "•";
+}
+
+ol {
+  counter-reset: li;
+  list-style: none;
+}
+ol > li > p:before {
+  content: counter(li) ". ";
+  counter-increment: li;
+  color: var(--brown-800);
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.indent {
+  margin-left: 1.25rem;
+}
+
+hr {
+  height: 1px;
+  background-color: var(--stone-150);
+  border: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+body {
+    padding: 0;
+}
+
+.container {
+    padding: 0;
+    border-radius: 0;
+    gap: 0;
+}
+
+.text-content {
+padding: 2.5rem 2rem;
+}
+
+.header-image {
+    height: 171px;
+ border-radius: 0;
+}
+
+  .header-image {
+    height: 171px;
+  }
+
+ 
+
+  .title-description {
+    gap: 1rem;
+  }
+
+  .preparation,
+  .ingredients,
+  .instructions,
+  .nutrition {
+    gap: 0.5rem;
+  }
+
+  .preparation {
+    padding: 1rem;
+  }
+
+  .time-list,
+  .ingredients-list,
+  .instructions-list {
+    gap: 0.25rem;
+  }
+
+  .grid-wrap {
+    padding: 0.5rem 1rem;
+  }
+
+  .grid-wrap p:last-child {
+    font-size: 0.875rem;
+  }
+
+  .text-preset1 {
+    font-size: 2rem;
+  }
+
+  .text-preset2 {
+    font-size: 1.5rem;
+  }
+
+  .text-preset3 {
+    font-size: 1.125rem;
+  }
+
+  .text-preset4 {
+    font-size: 0.875rem;
+  }
+
+  .text-preset4-bold {
+    font-size: 0.875rem;
+  }
